@@ -1,0 +1,6 @@
+*temperature regulation
+.include ../AE01.06.08.001.cir
+.param VIN=12
+.step temp -40 150 1
+.op
+.backanno

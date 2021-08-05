@@ -1,0 +1,8 @@
+.title KiCad schematic
+.include "models/ntc_20130313.lib"
+XU1 /OUT2 0 B57452V5104J062
+R2 VCC /OUT2 100k
+R3 /OUT1 0 100k
+R1 VCC /OUT1 100k
+V1 VCC 0 {VIN}
+.end

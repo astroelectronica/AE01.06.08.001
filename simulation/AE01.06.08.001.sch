@@ -1,0 +1,234 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "B57452V5104J062 wheatstone bridge"
+Date "2020-03-14"
+Rev "1"
+Comp "astroelectronic@"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Thermistor_NTC U1
+U 1 1 5E6B6103
+P 5500 4750
+F 0 "U1" H 5597 4796 50  0000 L CNN
+F 1 "B57452V5104J062" H 5597 4705 50  0000 L CNN
+F 2 "" H 5500 4800 50  0001 C CNN
+F 3 "~" H 5500 4800 50  0001 C CNN
+F 4 "X" H 5500 4750 50  0001 C CNN "Spice_Primitive"
+F 5 "B57452V5104J062" H 5500 4750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5500 4750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "models/ntc_20130313.lib" H 5500 4750 50  0001 C CNN "Spice_Lib_File"
+	1    5500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5500 5500 4900
+$Comp
+L pspice:0 #GND02
+U 1 1 5E6B77E9
+P 5500 5500
+F 0 "#GND02" H 5500 5400 50  0001 C CNN
+F 1 "0" H 5500 5377 50  0000 C CNN
+F 2 "" H 5500 5500 50  0001 C CNN
+F 3 "~" H 5500 5500 50  0001 C CNN
+	1    5500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E6B810A
+P 5500 3750
+F 0 "R2" H 5570 3796 50  0000 L CNN
+F 1 "100k" H 5570 3705 50  0000 L CNN
+F 2 "" V 5430 3750 50  0001 C CNN
+F 3 "~" H 5500 3750 50  0001 C CNN
+F 4 "R" H 5500 3750 50  0001 C CNN "Spice_Primitive"
+F 5 "100k" H 5500 3750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5500 3750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E6B8802
+P 4500 4750
+F 0 "R3" H 4570 4796 50  0000 L CNN
+F 1 "100k" H 4570 4705 50  0000 L CNN
+F 2 "" V 4430 4750 50  0001 C CNN
+F 3 "~" H 4500 4750 50  0001 C CNN
+F 4 "R" H 4500 4750 50  0001 C CNN "Spice_Primitive"
+F 5 "100k" H 4500 4750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 4750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E6B8C52
+P 4500 3750
+F 0 "R1" H 4570 3796 50  0000 L CNN
+F 1 "100k" H 4570 3705 50  0000 L CNN
+F 2 "" V 4430 3750 50  0001 C CNN
+F 3 "~" H 4500 3750 50  0001 C CNN
+F 4 "R" H 4500 3750 50  0001 C CNN "Spice_Primitive"
+F 5 "100k" H 4500 3750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4500 3750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 5500 4500 4900
+$Comp
+L pspice:0 #GND01
+U 1 1 5E6B9141
+P 4500 5500
+F 0 "#GND01" H 4500 5400 50  0001 C CNN
+F 1 "0" H 4500 5377 50  0000 C CNN
+F 2 "" H 4500 5500 50  0001 C CNN
+F 3 "~" H 4500 5500 50  0001 C CNN
+	1    4500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4600 4500 4000
+Wire Wire Line
+	5500 4600 5500 4500
+Wire Wire Line
+	4500 3600 4500 3000
+Wire Wire Line
+	4500 3000 5000 3000
+Wire Wire Line
+	5500 3000 5500 3600
+Wire Wire Line
+	5000 3000 5000 2500
+Connection ~ 5000 3000
+Wire Wire Line
+	5000 3000 5500 3000
+$Comp
+L power:VCC #PWR01
+U 1 1 5E6B9BCD
+P 5000 2500
+F 0 "#PWR01" H 5000 2350 50  0001 C CNN
+F 1 "VCC" H 5017 2673 50  0000 C CNN
+F 2 "" H 5000 2500 50  0001 C CNN
+F 3 "" H 5000 2500 50  0001 C CNN
+	1    5000 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4000 6000 4000
+Connection ~ 4500 4000
+Wire Wire Line
+	4500 4000 4500 3900
+Wire Wire Line
+	5500 4500 6000 4500
+Connection ~ 5500 4500
+Wire Wire Line
+	5500 4500 5500 3900
+Text Label 6500 4000 0    50   ~ 0
+OUT1
+Text Label 6500 4500 0    50   ~ 0
+OUT2
+$Comp
+L pspice:0 #GND03
+U 1 1 5E6BACC5
+P 3500 5500
+F 0 "#GND03" H 3500 5400 50  0001 C CNN
+F 1 "0" H 3500 5377 50  0000 C CNN
+F 2 "" H 3500 5500 50  0001 C CNN
+F 3 "~" H 3500 5500 50  0001 C CNN
+	1    3500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E6BC3F3
+P 3500 2500
+F 0 "#FLG01" H 3500 2575 50  0001 C CNN
+F 1 "PWR_FLAG" H 3500 2673 50  0000 C CNN
+F 2 "" H 3500 2500 50  0001 C CNN
+F 3 "~" H 3500 2500 50  0001 C CNN
+	1    3500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E6BC797
+P 3000 4500
+F 0 "#FLG02" H 3000 4575 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 4673 50  0000 C CNN
+F 2 "" H 3000 4500 50  0001 C CNN
+F 3 "~" H 3000 4500 50  0001 C CNN
+	1    3000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5E6BCFC5
+P 6000 3900
+F 0 "#FLG03" H 6000 3975 50  0001 C CNN
+F 1 "PWR_FLAG" H 6000 4073 50  0000 C CNN
+F 2 "" H 6000 3900 50  0001 C CNN
+F 3 "~" H 6000 3900 50  0001 C CNN
+	1    6000 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5E6BD6E7
+P 6000 4400
+F 0 "#FLG04" H 6000 4475 50  0001 C CNN
+F 1 "PWR_FLAG" H 6000 4573 50  0000 C CNN
+F 2 "" H 6000 4400 50  0001 C CNN
+F 3 "~" H 6000 4400 50  0001 C CNN
+	1    6000 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4500 6000 4400
+Connection ~ 6000 4500
+Wire Wire Line
+	6000 4500 7000 4500
+Wire Wire Line
+	6000 4000 6000 3900
+Connection ~ 6000 4000
+Wire Wire Line
+	6000 4000 7000 4000
+$Comp
+L Simulation_SPICE:VDC V1
+U 1 1 5E6BE275
+P 3500 4000
+F 0 "V1" H 3630 4046 50  0000 L CNN
+F 1 "{VIN}" H 3630 3955 50  0000 L CNN
+F 2 "" H 3500 4000 50  0001 C CNN
+F 3 "~" H 3500 4000 50  0001 C CNN
+F 4 "Y" H 3500 4000 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 3500 4000 50  0001 L CNN "Spice_Primitive"
+	1    3500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3800 3500 3000
+Wire Wire Line
+	3500 3000 4500 3000
+Connection ~ 4500 3000
+Wire Wire Line
+	3500 3000 3500 2500
+Connection ~ 3500 3000
+Wire Wire Line
+	3500 5500 3500 4750
+Wire Wire Line
+	3000 4500 3000 4750
+Wire Wire Line
+	3000 4750 3500 4750
+Connection ~ 3500 4750
+Wire Wire Line
+	3500 4750 3500 4200
+$EndSCHEMATC

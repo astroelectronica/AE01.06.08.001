@@ -1,0 +1,5 @@
+*temperaure regulation
+.meas R_ntc_ou1_out2 find V(/out2)/Ix(u1:1) when V(/out1)=V(/out2)
+.meas V_ntc_ou1_out2 find V(/out2) when V(/out1)=V(/out2)
+.meas I_ntc_ou1_out2 find Ix(u1:1) when V(/out1)=V(/out2)
+.meas P_ntc_ou1_out2 find V(/out2)*Ix(u1:1) when V(/out1)=V(/out2)
